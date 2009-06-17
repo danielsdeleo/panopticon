@@ -1,0 +1,22 @@
+Potentially useful proc locations:
+/proc/self/mountstats
+/proc/stat
+/proc/partitions
+/proc/diskstats
+/proc/interrupts
+/proc/uptime
+/proc/net/snmp
+/proc/net/rpc/nfsd
+proc3 
+proc4ops 
+/proc/net/rpc/nfs
+proc4 
+/proc/vmstat
+/proc/meminfo
+/proc/net/dev
+/proc/net/sockstat
+/proc/sys/fs/dentry-state
+/proc/sys/fs/file-nr
+/proc/sys/fs/inode-state
+/proc/sys/kernel/pty/nr
+/proc/loadavg
