@@ -1,0 +1,3 @@
+[submodule "contrib/nanite"]
+	path = contrib/nanite
+	url = git://github.com/ezmobius/nanite.git
