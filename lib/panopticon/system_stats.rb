@@ -8,7 +8,7 @@ module Panopticon
       @os = @system.data["os"]
     end
     
-    def memory
+    def memory(args=nil)
       @system.require_plugin("#{os}/memory", true)
       @system.data["memory"]
     end
@@ -16,7 +16,7 @@ module Panopticon
     # Uses the raw counter stats from #raw_diskstats to compute per second
     # disk I/O stats
     # It is assumed that sectors are always and everywhere 512 bytes.
-    def diskstats
+    def diskstats(args=nil)
       if @last_raw_diskstats
         current_raw_stats = raw_diskstats
         diskstats_per_s = compute_diskstats_per_s(current_raw_stats, @last_raw_diskstats)
@@ -46,7 +46,7 @@ module Panopticon
       end
     end
       
-    def loadavg
+    def loadavg(args=nil)
       load_stats = {"time" => Time.now.to_f}
       if @os == "linux"
         File.open("/proc/loadavg", "r").each do |line|
@@ -74,7 +74,7 @@ module Panopticon
       net_stats
     end
     
-    def netstats
+    def netstats(args=nil)
       if @last_raw_netstats
         current_raw_stats = raw_netstats
         netstats_per_s = compute_netstats_per_s(current_raw_stats, @last_raw_netstats)
